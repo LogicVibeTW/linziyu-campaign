@@ -1,6 +1,9 @@
-import { contactList } from "../data/content";
+import { useState } from "react";
+import { contactList, privacyPolicy } from "../data/content";
 
 export default function Contact() {
+  const [showPolicy, setShowPolicy] = useState(false);
+
   return (
     <section className="section" id="contact">
       <div className="section-head reveal">
@@ -26,7 +29,29 @@ export default function Contact() {
       </div>
       <div className="legal-note reveal">
         <div className="legal-title">聲明與隱私</div>
-        <div className="legal-text">個資與隱私政策連結可放此區，僅占位不提供點擊。</div>
+        <div className="legal-text">
+          本網站蒐集之個人資料（如志工報名表單）僅用於競選團隊聯繫用途，並使用 Google
+          表單、Facebook、LINE、Vercel Analytics 等第三方服務。
+        </div>
+        <button
+          type="button"
+          className="legal-toggle"
+          onClick={() => setShowPolicy((v) => !v)}
+        >
+          {showPolicy ? "收合完整隱私權政策 ▲" : "查看完整隱私權政策 ▼"}
+        </button>
+
+        {showPolicy && (
+          <div className="legal-full">
+            {privacyPolicy.sections.map((section) => (
+              <div className="legal-section" key={section.title}>
+                <div className="legal-section-title">{section.title}</div>
+                <p>{section.body}</p>
+              </div>
+            ))}
+            <div className="legal-updated">最後更新：{privacyPolicy.updated}</div>
+          </div>
+        )}
       </div>
     </section>
   );
