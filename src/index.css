@@ -634,6 +634,47 @@ h1 {
   font-weight: 600;
 }
 
+.form-inline-link {
+  font-size: 13px;
+  color: var(--party-deep);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.form-inline-link:hover {
+  text-decoration: underline;
+}
+
+.form-section {
+  margin-top: 32px;
+  scroll-margin-top: 110px;
+}
+
+.form-section-head {
+  max-width: 640px;
+  margin-bottom: 20px;
+}
+
+.form-section-head p {
+  color: var(--muted);
+  margin: 6px 0 0;
+}
+
+.form-embed-wrap {
+  border-radius: 20px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  box-shadow: 0 16px 30px rgba(11, 24, 33, 0.08);
+  overflow: hidden;
+  max-width: 760px;
+}
+
+.form-embed-wrap iframe {
+  display: block;
+  border: none;
+  width: 100%;
+}
+
 .policy-list {
   display: grid;
   gap: 14px;

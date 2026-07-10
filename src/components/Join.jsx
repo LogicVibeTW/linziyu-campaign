@@ -21,8 +21,31 @@ export default function Join() {
             >
               {action.cta}
             </a>
+            {action.title === "加入志工" && (
+              <a className="form-inline-link" href="#volunteer-form">
+                或填寫志工報名表 →
+              </a>
+            )}
           </div>
         ))}
+      </div>
+
+      <div className="form-section reveal" id="volunteer-form">
+        <div className="form-section-head">
+          <div className="action-title">志工報名表</div>
+          <p>想更明確地告訴我們你能協助的項目與時段？填寫這份表單，讓分工更有效率。</p>
+        </div>
+        <div className="form-embed-wrap">
+          <iframe
+            src={site.volunteerFormUrl}
+            title="志工報名表"
+            width="100%"
+            height="900"
+            loading="lazy"
+          >
+            載入中…
+          </iframe>
+        </div>
       </div>
       <div className="join-strip reveal">
         <div className="join-text">
