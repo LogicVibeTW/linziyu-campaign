@@ -44,8 +44,6 @@ export default function Hero() {
               className="portrait"
               src="/linziyu.jpg"
               alt={`${site.name} 候選人照片`}
-              width="960"
-              height="958"
               fetchPriority="high"
               decoding="async"
             />
