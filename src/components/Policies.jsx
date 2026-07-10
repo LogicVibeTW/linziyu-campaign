@@ -24,8 +24,8 @@ export default function Policies() {
         <div className="report-strip reveal">
           <div className="report-text">
             <div className="join-label">在地回報</div>
-            <h3>看到人行道被佔用、停車亂象？</h3>
-            <p>拍張照片回報給我們，讓政見更貼近你家巷口的真實狀況。</p>
+            <h3>你的巷弄日常，由你與我們共同守護</h3>
+            <p>若發現任何影響生活品質的狀況，或有希望改善的地方，歡迎拍照上傳。您的每一次回報，都是讓板橋進步的關鍵力量。</p>
           </div>
           <a className="btn primary" href={site.reportFormUrl} target="_blank" rel="noreferrer">
             立即回報並附照片
