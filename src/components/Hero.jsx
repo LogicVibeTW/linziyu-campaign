@@ -38,7 +38,18 @@ export default function Hero() {
         <div className="orb orb-2" aria-hidden="true"></div>
         <div className="portrait-card">
           <div className="portrait-badge">候選人</div>
-          <img className="portrait" src="/linziyu.jpg" alt={`${site.name} 候選人照片`} />
+          <picture>
+            <source srcSet="/linziyu.webp" type="image/webp" />
+            <img
+              className="portrait"
+              src="/linziyu.jpg"
+              alt={`${site.name} 候選人照片`}
+              width="960"
+              height="958"
+              fetchPriority="high"
+              decoding="async"
+            />
+          </picture>
           <div className="portrait-caption">
             <div className="portrait-name">{site.name}</div>
             <div className="portrait-party">民眾黨</div>

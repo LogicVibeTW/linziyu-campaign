@@ -6,8 +6,8 @@ export default function Policies() {
       <div className="section-inner">
         <div className="section-head reveal">
           <div className="section-label">核心政見</div>
-          <h2>政見整理中</h2>
-          <p>核心政策細項將陸續公布，敬請期待。</p>
+          <h2>優先推動的三項行動</h2>
+          <p>從板橋日常最有感的問題著手，完整政見將陸續補充細節與時程。</p>
         </div>
         <div className="feature-grid">
           {policies.map((policy) => (
