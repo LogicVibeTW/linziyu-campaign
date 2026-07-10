@@ -17,8 +17,8 @@ export const site = {
   addressHref: "https://www.google.com/maps/search/?api=1&query=220+%E6%96%B0%E5%8C%97%E5%B8%82%E6%9D%BF%E6%A9%8B%E5%8D%80%E9%9B%99%E5%8D%81%E8%B7%AF%E4%B8%80%E6%AE%B5+6+%E8%99%9F",
   volunteerFormUrl:
     "https://docs.google.com/forms/d/e/1FAIpQLSe3Z3mSSenV6Ic3uBZLlmBrm2fXevVU27y7wg6MRkVK4foRfA/viewform?embedded=true",
-  feedbackFormUrl: "https://forms.gle/4QBAMwmWqrhahE6s7",
-  reportFormUrl: "https://forms.gle/Xc4pHrfgb76RcSCDA",
+  feedbackFormUrl: "https://forms.gle/BkXe2N9DrH5TaVfa8",
+  reportFormUrl: "https://forms.gle/FN2fdpPKhmjJse7V9",
 };
 
 export const nav = [
