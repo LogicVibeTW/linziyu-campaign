@@ -18,6 +18,7 @@ export const site = {
   volunteerFormUrl:
     "https://docs.google.com/forms/d/e/1FAIpQLSe3Z3mSSenV6Ic3uBZLlmBrm2fXevVU27y7wg6MRkVK4foRfA/viewform?embedded=true",
   feedbackFormUrl: "https://forms.gle/4QBAMwmWqrhahE6s7",
+  reportFormUrl: "https://forms.gle/Xc4pHrfgb76RcSCDA",
 };
 
 export const nav = [

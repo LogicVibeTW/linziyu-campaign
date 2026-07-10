@@ -1,4 +1,4 @@
-import { policies } from "../data/content";
+import { site, policies } from "../data/content";
 
 export default function Policies() {
   return (
@@ -19,6 +19,18 @@ export default function Policies() {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="report-strip reveal">
+          <div className="report-text">
+            <div className="join-label">在地回報</div>
+            <h3>看到人行道被佔用、停車亂象？</h3>
+            <p>拍張照片回報給我們，讓政見更貼近你家巷口的真實狀況。</p>
+          </div>
+          <a className="btn primary" href={site.reportFormUrl} target="_blank" rel="noreferrer">
+            立即回報並附照片
+          </a>
+          <div className="report-note">需登入 Google 帳號，以便上傳照片</div>
         </div>
       </div>
     </section>
