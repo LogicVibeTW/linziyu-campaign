@@ -36,26 +36,28 @@ export default function Updates() {
 
   return (
     <section className="section alt" id="updates">
-      <div className="section-head reveal">
-        <div className="section-label">最新</div>
-        <h2>最新動態與活動紀錄</h2>
-        <p>以下同步自 Facebook 粉專，貼文發布後將自動顯示於此，最新資訊請以粉專為準。</p>
-      </div>
-      <div className="fb-feed-wrap reveal" ref={containerRef}>
-        <div
-          className="fb-page"
-          data-href={site.facebookUrl.split("?")[0]}
-          data-tabs="timeline"
-          data-width=""
-          data-height="620"
-          data-small-header="false"
-          data-adapt-container-width="true"
-          data-hide-cover="false"
-          data-show-facepile="true"
-        >
-          <blockquote cite={site.facebookUrl} className="fb-xfbml-parse-ignore">
-            <a href={site.facebookUrl}>{site.name}</a>
-          </blockquote>
+      <div className="section-inner">
+        <div className="section-head reveal">
+          <div className="section-label">最新</div>
+          <h2>最新動態與活動紀錄</h2>
+          <p>以下同步自 Facebook 粉專，貼文發布後將自動顯示於此，最新資訊請以粉專為準。</p>
+        </div>
+        <div className="fb-feed-wrap reveal" ref={containerRef}>
+          <div
+            className="fb-page"
+            data-href={site.facebookUrl.split("?")[0]}
+            data-tabs="timeline"
+            data-width=""
+            data-height="620"
+            data-small-header="false"
+            data-adapt-container-width="true"
+            data-hide-cover="false"
+            data-show-facepile="true"
+          >
+            <blockquote cite={site.facebookUrl} className="fb-xfbml-parse-ignore">
+              <a href={site.facebookUrl}>{site.name}</a>
+            </blockquote>
+          </div>
         </div>
       </div>
     </section>
