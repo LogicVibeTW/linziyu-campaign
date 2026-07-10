@@ -21,11 +21,6 @@ export default function Join() {
             >
               {action.cta}
             </a>
-            {action.title === "加入志工" && (
-              <a className="form-inline-link" href="#volunteer-form">
-                或填寫志工報名表 →
-              </a>
-            )}
           </div>
         ))}
       </div>
