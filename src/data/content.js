@@ -87,21 +87,21 @@ export const joinActions = [
     text: "第一時間收到志工任務、活動通知與最新政見進度，隨時掌握子宇的最新消息。",
     cta: "加入 LINE 好友",
     href: site.lineUrl,
-    primary: true,
+    variant: "line",
   },
   {
     title: "想讓子宇聽見你的聲音？",
     text: "分享你關心的議題與需求，讓政策更貼近現場。",
     cta: "填寫建議",
     href: site.feedbackFormUrl,
-    primary: false,
+    variant: "feedback",
   },
   {
     title: "支持方式",
     text: "支持選戰、贊助文宣與活動經費，可透過民眾黨政治獻金專戶捐款。",
     cta: "前往政治獻金捐款",
     href: site.donateUrl,
-    primary: false,
+    variant: "donate",
   },
 ];
 

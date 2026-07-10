@@ -207,6 +207,24 @@ h1 {
   background: rgba(255, 255, 255, 0.7);
 }
 
+.btn.btn-line {
+  background: linear-gradient(135deg, var(--party), var(--party-deep));
+  color: #fff;
+  box-shadow: 0 12px 24px rgba(10, 168, 156, 0.28);
+}
+
+.btn.btn-feedback {
+  background: linear-gradient(135deg, var(--accent), #0089a3);
+  color: #fff;
+  box-shadow: 0 12px 24px rgba(0, 180, 201, 0.28);
+}
+
+.btn.btn-donate {
+  background: linear-gradient(135deg, #c9973f, #a8762a);
+  color: #fff;
+  box-shadow: 0 12px 24px rgba(201, 151, 63, 0.3);
+}
+
 .btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 16px 26px rgba(11, 24, 33, 0.18);
@@ -576,6 +594,8 @@ h1 {
 
 .social-handle {
   color: var(--muted);
+  overflow-wrap: break-word;
+  word-break: break-all;
 }
 
 .social-note {

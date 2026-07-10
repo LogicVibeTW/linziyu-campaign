@@ -14,7 +14,7 @@ export default function Join() {
             <div className="action-title">{action.title}</div>
             <p>{action.text}</p>
             <a
-              className={`btn ${action.primary ? "primary" : "ghost"}`}
+              className={`btn btn-${action.variant}`}
               href={action.href}
               target="_blank"
               rel="noreferrer"
