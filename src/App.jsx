@@ -19,9 +19,13 @@ export default function App() {
       <div className="bg-grid" aria-hidden="true"></div>
       <div className="noise" aria-hidden="true"></div>
 
+      <a href="#main-content" className="skip-link">
+        跳到主要內容
+      </a>
+
       <Header />
 
-      <main>
+      <main id="main-content">
         <Hero />
         <About />
         <Policies />

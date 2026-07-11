@@ -1,16 +1,18 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { site } from "../data/content";
 
 const FB_SDK_ID = "facebook-jssdk";
 
 export default function Updates() {
   const containerRef = useRef(null);
+  const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     function parseXfbml() {
       if (window.FB && window.FB.XFBML) {
         window.FB.XFBML.parse(containerRef.current);
       }
+      setLoaded(true);
     }
 
     if (document.getElementById(FB_SDK_ID)) {
@@ -43,6 +45,18 @@ export default function Updates() {
           <p>以下同步自 Facebook 粉專，貼文發布後將自動顯示於此，最新資訊請以粉專為準。</p>
         </div>
         <div className="fb-feed-wrap reveal" ref={containerRef}>
+          {!loaded && (
+            <div className="fb-skeleton" aria-hidden="true">
+              <div className="fb-skeleton-header">
+                <div className="fb-skeleton-avatar"></div>
+                <div className="fb-skeleton-lines">
+                  <div className="fb-skeleton-line short"></div>
+                  <div className="fb-skeleton-line shorter"></div>
+                </div>
+              </div>
+              <div className="fb-skeleton-body"></div>
+            </div>
+          )}
           <div
             className="fb-page"
             data-href={site.facebookUrl.split("?")[0]}
