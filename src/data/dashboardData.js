@@ -24,16 +24,19 @@ export const topicBreakdown = [
   { label: "親子與教育", value: 7 },
   { label: "環境與公共空間", value: 4 },
   { label: "治安", value: 2 },
-  { label: "長者照顧", value: 2 },
+  { label: "長者照顧與社會福利", value: 2 },
+  { label: "諮詢與法律服務", value: 1 },
 ];
 
 export const districtBreakdown = [
-  { label: "府中／新板", value: 14 },
-  { label: "浮洲／溪崑", value: 11 },
-  { label: "江翠", value: 7 },
-  { label: "湳雅", value: 5 },
+  { label: "新板特區", value: 9 },
+  { label: "府中／湳雅商圈", value: 8 },
+  { label: "江翠", value: 6 },
+  { label: "浮洲", value: 6 },
+  { label: "溪崑", value: 5 },
+  { label: "後埔", value: 4 },
   { label: "埔墘", value: 3 },
-  { label: "其他板橋地區", value: 2 },
+  { label: "其他", value: 1 },
 ];
 
 export const ageBreakdown = [
