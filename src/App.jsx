@@ -5,6 +5,7 @@ import About from "./components/About";
 import Policies from "./components/Policies";
 import Join from "./components/Join";
 import Updates from "./components/Updates";
+import Dashboard from "./components/Dashboard";
 import Media from "./components/Media";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -31,6 +32,7 @@ export default function App() {
         <Policies />
         <Join />
         <Updates />
+        <Dashboard />
         <Media />
         <Contact />
       </main>
