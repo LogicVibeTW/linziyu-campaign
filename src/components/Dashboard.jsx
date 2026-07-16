@@ -20,6 +20,7 @@ function BarList({ title, data }) {
               <div
                 className="dash-bar-fill"
                 style={{ width: `${(item.value / max) * 100}%` }}
+                aria-hidden="true"
               ></div>
             </div>
             <div className="dash-bar-value">{item.value}</div>
@@ -74,6 +75,7 @@ export default function Dashboard() {
               <div
                 className="dash-donut"
                 style={{ background: `conic-gradient(${gradientStops})` }}
+                aria-hidden="true"
               >
                 <div className="dash-donut-center">
                   <div className="dash-donut-total">{total}</div>
