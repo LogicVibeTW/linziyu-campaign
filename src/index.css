@@ -624,6 +624,20 @@ h1 {
   border-bottom: 1px solid var(--line);
 }
 
+.policy-accordion-collapse {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+}
+
+.policy-accordion-item.is-open .policy-accordion-collapse {
+  grid-template-rows: 1fr;
+}
+
+.policy-accordion-collapse-inner {
+  overflow: hidden;
+}
+
 .policy-accordion-body {
   padding: 8px 24px 24px;
   display: grid;

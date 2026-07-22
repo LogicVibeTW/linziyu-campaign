@@ -2,7 +2,7 @@ import { useState } from "react";
 import { site, policyCategories } from "../data/content";
 
 export default function Policies() {
-  const [openId, setOpenId] = useState(policyCategories[0]?.id ?? null);
+  const [openId, setOpenId] = useState(null);
 
   return (
     <section className="section alt" id="policies">
@@ -36,21 +36,23 @@ export default function Policies() {
                   </span>
                 </button>
 
-                {isOpen && (
-                  <div className="policy-accordion-body">
-                    {category.items.map((item, index) => (
-                      <div className="policy-accordion-row" key={item.title}>
-                        <div className="policy-accordion-index">
-                          {String(index + 1).padStart(2, "0")}
+                <div className="policy-accordion-collapse">
+                  <div className="policy-accordion-collapse-inner">
+                    <div className="policy-accordion-body">
+                      {category.items.map((item, index) => (
+                        <div className="policy-accordion-row" key={item.title}>
+                          <div className="policy-accordion-index">
+                            {String(index + 1).padStart(2, "0")}
+                          </div>
+                          <div>
+                            <h3>{item.title}</h3>
+                            <p>{item.text}</p>
+                          </div>
                         </div>
-                        <div>
-                          <h3>{item.title}</h3>
-                          <p>{item.text}</p>
-                        </div>
-                      </div>
-                    ))}
+                      ))}
+                    </div>
                   </div>
-                )}
+                </div>
               </div>
             );
           })}
