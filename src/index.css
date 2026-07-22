@@ -567,6 +567,99 @@ h1 {
   margin: 0 0 6px;
 }
 
+.policy-accordion {
+  display: grid;
+  gap: 16px;
+}
+
+.policy-accordion-item {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  box-shadow: 0 16px 30px rgba(11, 24, 33, 0.08);
+  overflow: hidden;
+}
+
+.policy-accordion-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 22px 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+}
+
+.policy-accordion-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.policy-accordion-subtitle {
+  font-size: 13px;
+  color: var(--party-deep);
+  margin-top: 4px;
+  font-weight: 600;
+}
+
+.policy-accordion-chevron {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(10, 168, 156, 0.1);
+  color: var(--party-deep);
+  display: grid;
+  place-items: center;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.policy-accordion-item.is-open .policy-accordion-header {
+  border-bottom: 1px solid var(--line);
+}
+
+.policy-accordion-body {
+  padding: 8px 24px 24px;
+  display: grid;
+  gap: 18px;
+}
+
+.policy-accordion-row {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 14px;
+}
+
+.policy-accordion-row h3 {
+  margin: 0 0 6px;
+  font-size: 16px;
+}
+
+.policy-accordion-row p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.policy-accordion-index {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--party-deep);
+  background: rgba(10, 168, 156, 0.1);
+  border-radius: 10px;
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+}
+
 .social-grid {
   display: grid;
   gap: 18px;

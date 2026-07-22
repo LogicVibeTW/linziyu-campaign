@@ -1,24 +1,59 @@
-import { site, policies } from "../data/content";
+import { useState } from "react";
+import { site, policyCategories } from "../data/content";
 
 export default function Policies() {
+  const [openId, setOpenId] = useState(policyCategories[0]?.id ?? null);
+
   return (
     <section className="section alt" id="policies">
       <div className="section-inner">
         <div className="section-head reveal">
           <div className="section-label">核心政見</div>
-          <h2>優先推動的三項行動</h2>
-          <p>從板橋日常最有感的問題著手，完整政見將陸續補充細節與時程。</p>
+          <h2>優先推動的政見方向</h2>
+          <p>點擊分類展開詳細內容，完整政見將陸續補充細節與時程。</p>
         </div>
-        <div className="feature-grid">
-          {policies.map((policy) => (
-            <div className="feature reveal" key={policy.id}>
-              <div className="feature-icon">{policy.id}</div>
-              <div>
-                <h3>{policy.title}</h3>
-                <p>{policy.text}</p>
+
+        <div className="policy-accordion">
+          {policyCategories.map((category) => {
+            const isOpen = openId === category.id;
+            return (
+              <div
+                className={`policy-accordion-item reveal ${isOpen ? "is-open" : ""}`}
+                key={category.id}
+              >
+                <button
+                  type="button"
+                  className="policy-accordion-header"
+                  onClick={() => setOpenId(isOpen ? null : category.id)}
+                  aria-expanded={isOpen}
+                >
+                  <div>
+                    <div className="policy-accordion-title">{category.title}</div>
+                    <div className="policy-accordion-subtitle">{category.subtitle}</div>
+                  </div>
+                  <span className="policy-accordion-chevron" aria-hidden="true">
+                    {isOpen ? "－" : "＋"}
+                  </span>
+                </button>
+
+                {isOpen && (
+                  <div className="policy-accordion-body">
+                    {category.items.map((item, index) => (
+                      <div className="policy-accordion-row" key={item.title}>
+                        <div className="policy-accordion-index">
+                          {String(index + 1).padStart(2, "0")}
+                        </div>
+                        <div>
+                          <h3>{item.title}</h3>
+                          <p>{item.text}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         <div className="report-strip reveal">
