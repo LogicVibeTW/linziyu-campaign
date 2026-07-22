@@ -14,7 +14,7 @@ function AccordionItem({ category, isOpen, onToggle }) {
   }, [isOpen]);
 
   return (
-    <div className={`policy-accordion-item reveal ${isOpen ? "is-open" : ""}`}>
+    <div className={`policy-accordion-item ${isOpen ? "is-open" : ""}`}>
       <button
         type="button"
         className="policy-accordion-header"
