@@ -1,5 +1,53 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { site, policyCategories } from "../data/content";
+
+function AccordionItem({ category, isOpen, onToggle }) {
+  const contentRef = useRef(null);
+  const [maxHeight, setMaxHeight] = useState("0px");
+
+  useEffect(() => {
+    if (isOpen && contentRef.current) {
+      setMaxHeight(`${contentRef.current.scrollHeight}px`);
+    } else {
+      setMaxHeight("0px");
+    }
+  }, [isOpen]);
+
+  return (
+    <div className={`policy-accordion-item ${isOpen ? "is-open" : ""}`}>
+      <button
+        type="button"
+        className="policy-accordion-header"
+        onClick={onToggle}
+        aria-expanded={isOpen}
+      >
+        <div>
+          <div className="policy-accordion-title">{category.title}</div>
+          <div className="policy-accordion-subtitle">{category.subtitle}</div>
+        </div>
+        <span className="policy-accordion-chevron" aria-hidden="true">
+          {isOpen ? "－" : "＋"}
+        </span>
+      </button>
+
+      <div className="policy-accordion-collapse" style={{ maxHeight }}>
+        <div ref={contentRef} className="policy-accordion-body">
+          {category.items.map((item, index) => (
+            <div className="policy-accordion-row" key={item.title}>
+              <div className="policy-accordion-index">
+                {String(index + 1).padStart(2, "0")}
+              </div>
+              <div>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default function Policies() {
   const [openId, setOpenId] = useState(null);
@@ -14,48 +62,14 @@ export default function Policies() {
         </div>
 
         <div className="policy-accordion">
-          {policyCategories.map((category) => {
-            const isOpen = openId === category.id;
-            return (
-              <div
-                className={`policy-accordion-item reveal ${isOpen ? "is-open" : ""}`}
-                key={category.id}
-              >
-                <button
-                  type="button"
-                  className="policy-accordion-header"
-                  onClick={() => setOpenId(isOpen ? null : category.id)}
-                  aria-expanded={isOpen}
-                >
-                  <div>
-                    <div className="policy-accordion-title">{category.title}</div>
-                    <div className="policy-accordion-subtitle">{category.subtitle}</div>
-                  </div>
-                  <span className="policy-accordion-chevron" aria-hidden="true">
-                    {isOpen ? "－" : "＋"}
-                  </span>
-                </button>
-
-                <div className="policy-accordion-collapse">
-                  <div className="policy-accordion-collapse-inner">
-                    <div className="policy-accordion-body">
-                      {category.items.map((item, index) => (
-                        <div className="policy-accordion-row" key={item.title}>
-                          <div className="policy-accordion-index">
-                            {String(index + 1).padStart(2, "0")}
-                          </div>
-                          <div>
-                            <h3>{item.title}</h3>
-                            <p>{item.text}</p>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
+          {policyCategories.map((category) => (
+            <AccordionItem
+              key={category.id}
+              category={category}
+              isOpen={openId === category.id}
+              onToggle={() => setOpenId(openId === category.id ? null : category.id)}
+            />
+          ))}
         </div>
 
         <div className="report-strip reveal">

@@ -625,17 +625,8 @@ h1 {
 }
 
 .policy-accordion-collapse {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows 0.3s ease;
-}
-
-.policy-accordion-item.is-open .policy-accordion-collapse {
-  grid-template-rows: 1fr;
-}
-
-.policy-accordion-collapse-inner {
   overflow: hidden;
+  transition: max-height 0.3s ease;
 }
 
 .policy-accordion-body {
