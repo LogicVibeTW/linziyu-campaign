@@ -11,6 +11,7 @@ export const site = {
   facebookUtm: "https://www.facebook.com/Judie.CY.Lin/?locale=zh_TW&utm_source=website&utm_medium=social_card",
   instagramUrl: "https://www.instagram.com/judielin.1995/?utm_source=website&utm_medium=social_card",
   youtubeUrl: "https://www.youtube.com/@Judie1995?sub_confirmation=1&utm_source=website&utm_medium=social_card",
+  youtubeChannelId: "UCYwrW6fF0ZJPaRpJEFfq96w",
   phone: "02-2250-8050",
   phoneHref: "tel:0222508050",
   address: "220 新北市板橋區雙十路一段 6 號",
@@ -26,6 +27,8 @@ export const nav = [
   { label: "核心政見", href: "#policies" },
   { label: "加入我們", href: "#join" },
   { label: "最新", href: "#updates" },
+  { label: "直播", href: "#live" },
+  { label: "通告", href: "#appearances" },
   { label: "媒體", href: "#media" },
   { label: "聯絡", href: "#contact" },
 ];
