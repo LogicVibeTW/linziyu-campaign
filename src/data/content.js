@@ -42,7 +42,7 @@ export const nav = [
 export const meta = [
   { title: "選區", value: "板橋" },
   { title: "關注議題", value: "交通 / 居住 / 青年" },
-  { title: "核心主張", value: "民眾及時雨" },
+  { title: "核心主張", value: "讓板橋宇眾不同" },
 ];
 
 export const aboutCards = [
@@ -120,7 +120,7 @@ export const news = [
 
 export const contactList = [
   { title: "LINE 官方帳號", value: "@384xzlnn（點擊加好友）", href: site.lineUrl },
-  { title: "官方信箱", value: "尚未公布", href: null },
+  { title: "官方信箱", value: "judieteam@gmail.com", href: null },
   { title: "聯絡電話", value: site.phone, href: site.phoneHref },
   { title: "服務處地址", value: site.address, href: site.addressHref },
 ];
