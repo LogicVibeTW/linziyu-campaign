@@ -9,7 +9,7 @@ export default function Contact() {
       <div className="section-head reveal">
         <div className="section-label">聯絡</div>
         <h2>與我們聯繫</h2>
-        <p>聯絡方式尚未全面公布，先提供服務處資訊與電話。</p>
+        <p>如有任何意見、建議或服務需求，歡迎透過以下方式與我們聯繫。</p>
       </div>
       <div className="policy-list">
         {contactList.map((item) => (
