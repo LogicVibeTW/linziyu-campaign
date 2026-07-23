@@ -42,7 +42,7 @@ export const nav = [
 export const meta = [
   { title: "選區", value: "板橋" },
   { title: "關注議題", value: "交通 / 居住 / 青年" },
-  { title: "核心主張", value: "讓板橋宇眾不同" },
+  { title: "競選核心", value: "讓板橋宇眾不同" },
 ];
 
 export const aboutCards = [
