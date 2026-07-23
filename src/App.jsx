@@ -6,7 +6,6 @@ import Policies from "./components/Policies";
 import Join from "./components/Join";
 import Updates from "./components/Updates";
 import Live from "./components/Live";
-import Appearances from "./components/Appearances";
 import Media from "./components/Media";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -34,7 +33,6 @@ export default function App() {
         <Join />
         <Updates />
         <Live />
-        <Appearances />
         <Media />
         <Contact />
       </main>

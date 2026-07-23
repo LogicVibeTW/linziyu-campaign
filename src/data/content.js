@@ -34,7 +34,6 @@ export const nav = [
   { label: "加入我們", href: "#join" },
   { label: "最新", href: "#updates" },
   { label: "直播", href: "#live" },
-  { label: "通告", href: "#appearances" },
   { label: "媒體", href: "#media" },
   { label: "聯絡", href: "#contact" },
 ];
