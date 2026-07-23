@@ -909,6 +909,22 @@ h1 {
   box-shadow: 0 16px 30px rgba(11, 24, 33, 0.08);
 }
 
+.sheet-status {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.sheet-status-error {
+  color: #b3261e;
+  border-color: rgba(179, 38, 30, 0.3);
+  background: rgba(179, 38, 30, 0.06);
+}
+
 .appearance-grid {
   display: grid;
   gap: 18px;

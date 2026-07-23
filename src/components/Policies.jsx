@@ -1,7 +1,9 @@
 import { useState, useRef, useEffect } from "react";
-import { site, policyCategories } from "../data/content";
+import { site } from "../data/content";
+import { usePolicies } from "../hooks/usePolicies";
 
-function AccordionItem({ category, isOpen, onToggle }) {
+function AccordionItem({ category }) {
+  const [isOpen, setIsOpen] = useState(false);
   const contentRef = useRef(null);
   const [maxHeight, setMaxHeight] = useState("0px");
 
@@ -18,7 +20,7 @@ function AccordionItem({ category, isOpen, onToggle }) {
       <button
         type="button"
         className="policy-accordion-header"
-        onClick={onToggle}
+        onClick={() => setIsOpen((v) => !v)}
         aria-expanded={isOpen}
       >
         <div>
@@ -50,7 +52,7 @@ function AccordionItem({ category, isOpen, onToggle }) {
 }
 
 export default function Policies() {
-  const [openId, setOpenId] = useState(null);
+  const { categories, loading, error } = usePolicies();
 
   return (
     <section className="section alt" id="policies">
@@ -61,16 +63,23 @@ export default function Policies() {
           <p>點擊分類展開詳細內容，完整政見將陸續補充細節與時程。</p>
         </div>
 
-        <div className="policy-accordion">
-          {policyCategories.map((category) => (
-            <AccordionItem
-              key={category.id}
-              category={category}
-              isOpen={openId === category.id}
-              onToggle={() => setOpenId(openId === category.id ? null : category.id)}
-            />
-          ))}
-        </div>
+        {loading && <div className="sheet-status">政見內容載入中…</div>}
+        {error && (
+          <div className="sheet-status sheet-status-error">
+            政見內容暫時無法讀取，請稍後再試。
+          </div>
+        )}
+        {categories && categories.length === 0 && !loading && (
+          <div className="sheet-status">目前尚未設定政見內容。</div>
+        )}
+
+        {categories && categories.length > 0 && (
+          <div className="policy-accordion">
+            {categories.map((category) => (
+              <AccordionItem key={category.id} category={category} />
+            ))}
+          </div>
+        )}
 
         <div className="report-strip reveal">
           <div className="report-text">
