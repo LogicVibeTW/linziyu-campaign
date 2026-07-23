@@ -120,7 +120,7 @@ export const news = [
 
 export const contactList = [
   { title: "LINE 官方帳號", value: "@384xzlnn（點擊加好友）", href: site.lineUrl },
-  { title: "官方信箱", value: "judieteam@gmail.com", href: null },
+  { title: "官方信箱", value: "judieteam@gmail.com", href: "mailto:judieteam@gmail.com" },
   { title: "聯絡電話", value: site.phone, href: site.phoneHref },
   { title: "服務處地址", value: site.address, href: site.addressHref },
 ];
