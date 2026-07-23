@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import { useSheetData } from "./useSheetData";
 import { site } from "../data/content";
+import { toYoutubeEmbedUrl } from "../utils/youtube";
 
 export function useAppearances() {
   const { data, loading, error } = useSheetData(site.appearancesSheetUrl);
@@ -14,7 +15,7 @@ export function useAppearances() {
         program: row.program,
         date: row.date,
         note: row.note,
-        embedUrl: row.embed_url,
+        embedUrl: toYoutubeEmbedUrl(row.embed_url),
       }));
   }, [data]);
 
