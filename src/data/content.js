@@ -10,6 +10,7 @@ export const site = {
   facebookUrl: "https://www.facebook.com/Judie.CY.Lin/?locale=zh_TW",
   facebookUtm: "https://www.facebook.com/Judie.CY.Lin/?locale=zh_TW&utm_source=website&utm_medium=social_card",
   instagramUrl: "https://www.instagram.com/judielin.1995/?utm_source=website&utm_medium=social_card",
+  threadsUrl: "https://www.threads.com/@judielin.1995?utm_source=website&utm_medium=social_card",
   youtubeUrl: "https://www.youtube.com/@Judie1995?sub_confirmation=1&utm_source=website&utm_medium=social_card",
   youtubeChannelId: "UCYwrW6fF0ZJPaRpJEFfq96w",
   phone: "02-2250-8050",

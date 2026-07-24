@@ -36,7 +36,7 @@ export default function Live() {
         {live && live.isLive && (
           <div className="live-embed-wrap reveal">
             <iframe
-              src={live.embedUrl}
+              src={`${live.embedUrl}?autoplay=1&mute=1&playsinline=1`}
               title="即時直播"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen

@@ -19,6 +19,11 @@ export default function Media() {
           <div className="social-handle">@judielin.1995</div>
           <div className="social-note">街頭行程與視覺素材</div>
         </a>
+        <a className="social-card reveal" href={site.threadsUrl} target="_blank" rel="noreferrer">
+          <div className="social-name">Threads</div>
+          <div className="social-handle">@judielin.1995</div>
+          <div className="social-note">即時想法與議題討論</div>
+        </a>
         <a className="social-card reveal" href={site.youtubeUrl} target="_blank" rel="noreferrer">
           <div className="social-name">YouTube</div>
           <div className="social-handle">@Judie1995</div>
