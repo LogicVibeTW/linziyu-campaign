@@ -3,6 +3,8 @@ export default function PreviewSwitcher({
   setLiveMode,
   heroMode,
   setHeroMode,
+  introEnabled,
+  setIntroEnabled,
 }) {
   return (
     <div className="preview-switcher">
@@ -48,6 +50,23 @@ export default function PreviewSwitcher({
           onClick={() => setHeroMode("video-replace")}
         >
           C：短影音取代照片
+        </button>
+      </div>
+      <div className="preview-switcher-group">
+        <div className="preview-switcher-label">進站片頭影片</div>
+        <button
+          type="button"
+          className={!introEnabled ? "is-active" : ""}
+          onClick={() => setIntroEnabled(false)}
+        >
+          現況：無片頭
+        </button>
+        <button
+          type="button"
+          className={introEnabled ? "is-active" : ""}
+          onClick={() => setIntroEnabled(true)}
+        >
+          D：進站先看短影音（可關閉）
         </button>
       </div>
     </div>

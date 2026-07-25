@@ -12,12 +12,14 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import FloatingActions from "./components/FloatingActions";
 import PreviewSwitcher from "./components/PreviewSwitcher";
+import IntroSplash from "./components/IntroSplash";
 import { useReveal } from "./hooks/useReveal";
 
 export default function App() {
   useReveal();
   const [liveMode, setLiveMode] = useState("auto-mute");
   const [heroMode, setHeroMode] = useState("photo");
+  const [introEnabled, setIntroEnabled] = useState(false);
 
   return (
     <>
@@ -33,7 +35,11 @@ export default function App() {
         setLiveMode={setLiveMode}
         heroMode={heroMode}
         setHeroMode={setHeroMode}
+        introEnabled={introEnabled}
+        setIntroEnabled={setIntroEnabled}
       />
+
+      <IntroSplash enabled={introEnabled} previewMode={true} />
 
       <Header />
 

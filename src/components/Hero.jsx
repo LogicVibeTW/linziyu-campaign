@@ -1,10 +1,8 @@
 import { site, meta } from "../data/content";
 import { getYoutubeVideoId } from "../utils/youtube";
 
-const SHORT_VIDEO_URL = "https://www.youtube.com/shorts/Hd-VEFDzT_A";
-
 function ShortVideoEmbed() {
-  const id = getYoutubeVideoId(SHORT_VIDEO_URL);
+  const id = getYoutubeVideoId(site.shortVideoUrl);
   return (
     <div className="hero-video-wrap">
       <iframe
@@ -19,7 +17,7 @@ function ShortVideoEmbed() {
 
 export default function Hero({ heroMode = "photo" }) {
   return (
-    <section className="hero" id="top">
+    <section className={`hero ${heroMode === "video-above" ? "hero--video-top" : ""}`} id="top">
       <div className="hero-content reveal">
         <div className="eyebrow">
           {site.party}｜{site.district}議員參選人
