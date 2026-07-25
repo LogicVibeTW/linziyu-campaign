@@ -5,6 +5,12 @@
 //  - https://www.youtube.com/embed/VIDEO_ID（已經是正確格式，原樣返回）
 //  - https://www.youtube.com/live/VIDEO_ID
 
+export function getYoutubeVideoId(url) {
+  const embed = toYoutubeEmbedUrl(url);
+  const match = embed.match(/\/embed\/([^?]+)/);
+  return match ? match[1] : "";
+}
+
 export function toYoutubeEmbedUrl(url) {
   if (!url) return "";
   const trimmed = url.trim();
@@ -27,6 +33,12 @@ export function toYoutubeEmbedUrl(url) {
     // www.youtube.com/watch?v=VIDEO_ID
     if (u.searchParams.get("v")) {
       return `https://www.youtube.com/embed/${u.searchParams.get("v")}`;
+    }
+
+    // www.youtube.com/shorts/VIDEO_ID
+    if (u.pathname.startsWith("/shorts/")) {
+      const id = u.pathname.replace("/shorts/", "");
+      return id ? `https://www.youtube.com/embed/${id}` : trimmed;
     }
 
     // www.youtube.com/live/VIDEO_ID

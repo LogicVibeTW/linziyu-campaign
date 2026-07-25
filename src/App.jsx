@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
@@ -10,10 +11,13 @@ import Media from "./components/Media";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import FloatingActions from "./components/FloatingActions";
+import PreviewSwitcher from "./components/PreviewSwitcher";
 import { useReveal } from "./hooks/useReveal";
 
 export default function App() {
   useReveal();
+  const [liveMode, setLiveMode] = useState("auto-mute");
+  const [heroMode, setHeroMode] = useState("photo");
 
   return (
     <>
@@ -24,15 +28,22 @@ export default function App() {
         跳到主要內容
       </a>
 
+      <PreviewSwitcher
+        liveMode={liveMode}
+        setLiveMode={setLiveMode}
+        heroMode={heroMode}
+        setHeroMode={setHeroMode}
+      />
+
       <Header />
 
       <main id="main-content">
-        <Hero />
+        <Hero heroMode={heroMode} />
         <About />
         <Policies />
         <Join />
         <Updates />
-        <Live />
+        <Live liveMode={liveMode} />
         <Media />
         <Contact />
       </main>
