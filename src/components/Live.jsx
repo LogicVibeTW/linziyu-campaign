@@ -1,10 +1,8 @@
 import { site } from "../data/content";
 import { useLiveStatus } from "../hooks/useLiveStatus";
 
-export default function Live({ liveMode = "auto-mute" }) {
+export default function Live() {
   const { live, loading, error } = useLiveStatus();
-  const params =
-    liveMode === "click-sound" ? "" : "?autoplay=1&mute=1&playsinline=1";
 
   return (
     <section className="section alt" id="live">
@@ -38,7 +36,7 @@ export default function Live({ liveMode = "auto-mute" }) {
         {live && live.isLive && (
           <div className="live-embed-wrap reveal">
             <iframe
-              src={`${live.embedUrl}${params}`}
+              src={live.embedUrl}
               title="即時直播"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen

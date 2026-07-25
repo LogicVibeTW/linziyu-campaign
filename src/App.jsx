@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
@@ -11,15 +10,10 @@ import Media from "./components/Media";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import FloatingActions from "./components/FloatingActions";
-import PreviewSwitcher from "./components/PreviewSwitcher";
-import IntroSplash from "./components/IntroSplash";
 import { useReveal } from "./hooks/useReveal";
 
 export default function App() {
   useReveal();
-  const [liveMode, setLiveMode] = useState("auto-mute");
-  const [heroMode, setHeroMode] = useState("photo");
-  const [introEnabled, setIntroEnabled] = useState(false);
 
   return (
     <>
@@ -30,26 +24,15 @@ export default function App() {
         跳到主要內容
       </a>
 
-      <PreviewSwitcher
-        liveMode={liveMode}
-        setLiveMode={setLiveMode}
-        heroMode={heroMode}
-        setHeroMode={setHeroMode}
-        introEnabled={introEnabled}
-        setIntroEnabled={setIntroEnabled}
-      />
-
-      <IntroSplash enabled={introEnabled} previewMode={true} />
-
       <Header />
 
       <main id="main-content">
-        <Hero heroMode={heroMode} />
+        <Hero />
         <About />
         <Policies />
         <Join />
         <Updates />
-        <Live liveMode={liveMode} />
+        <Live />
         <Media />
         <Contact />
       </main>

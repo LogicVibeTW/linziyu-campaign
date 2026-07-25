@@ -1,23 +1,8 @@
 import { site, meta } from "../data/content";
-import { getYoutubeVideoId } from "../utils/youtube";
 
-function ShortVideoEmbed() {
-  const id = getYoutubeVideoId(site.shortVideoUrl);
+export default function Hero() {
   return (
-    <div className="hero-video-wrap">
-      <iframe
-        src={`https://www.youtube.com/embed/${id}?autoplay=1&mute=1&loop=1&playlist=${id}&controls=0&playsinline=1&rel=0`}
-        title="短影音"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-      ></iframe>
-    </div>
-  );
-}
-
-export default function Hero({ heroMode = "photo" }) {
-  return (
-    <section className={`hero ${heroMode === "video-above" ? "hero--video-top" : ""}`} id="top">
+    <section className="hero" id="top">
       <div className="hero-content reveal">
         <div className="eyebrow">
           {site.party}｜{site.district}議員參選人
@@ -51,37 +36,23 @@ export default function Hero({ heroMode = "photo" }) {
       <div className="hero-visual reveal">
         <div className="orb orb-1" aria-hidden="true"></div>
         <div className="orb orb-2" aria-hidden="true"></div>
-
-        {heroMode === "video-above" && <ShortVideoEmbed />}
-
-        {heroMode === "video-replace" ? (
-          <div className="portrait-card">
-            <div className="portrait-badge">候選人</div>
-            <ShortVideoEmbed />
-            <div className="portrait-caption">
-              <div className="portrait-name">{site.name}</div>
-              <div className="portrait-party">民眾黨</div>
-            </div>
+        <div className="portrait-card">
+          <div className="portrait-badge">候選人</div>
+          <picture>
+            <source srcSet="/linziyu.webp" type="image/webp" />
+            <img
+              className="portrait"
+              src="/linziyu.jpg"
+              alt={`${site.name} 候選人照片`}
+              fetchPriority="high"
+              decoding="async"
+            />
+          </picture>
+          <div className="portrait-caption">
+            <div className="portrait-name">{site.name}</div>
+            <div className="portrait-party">民眾黨</div>
           </div>
-        ) : (
-          <div className="portrait-card">
-            <div className="portrait-badge">候選人</div>
-            <picture>
-              <source srcSet="/linziyu.webp" type="image/webp" />
-              <img
-                className="portrait"
-                src="/linziyu.jpg"
-                alt={`${site.name} 候選人照片`}
-                fetchPriority="high"
-                decoding="async"
-              />
-            </picture>
-            <div className="portrait-caption">
-              <div className="portrait-name">{site.name}</div>
-              <div className="portrait-party">民眾黨</div>
-            </div>
-          </div>
-        )}
+        </div>
       </div>
     </section>
   );
