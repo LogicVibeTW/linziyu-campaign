@@ -5,7 +5,7 @@ export default function Media() {
     <section className="section" id="media">
       <div className="section-head reveal">
         <div className="section-label">媒體</div>
-        <h2>最新動態與媒體曝光</h2>
+        <h2>官方社群平台</h2>
         <p>追蹤我們的官方社群，第一時間掌握最新活動訊息、政見論述與媒體報導。</p>
       </div>
       <div className="social-grid">

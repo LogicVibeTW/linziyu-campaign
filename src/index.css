@@ -1391,9 +1391,21 @@ h1 {
   }
 
   .nav {
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
     justify-content: flex-start;
     margin-left: 0;
+    padding-bottom: 2px;
+  }
+
+  .nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav a {
+    flex-shrink: 0;
   }
 
   .hero {
@@ -1413,7 +1425,12 @@ h1 {
   }
 
   .nav {
-    gap: 12px;
+    gap: 8px;
+  }
+
+  .nav a {
+    padding: 6px 12px;
+    font-size: 12px;
   }
 
   .hero {
