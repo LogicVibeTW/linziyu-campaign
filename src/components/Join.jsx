@@ -42,20 +42,6 @@ export default function Join() {
           </iframe>
         </div>
       </div>
-      <div className="join-strip reveal">
-        <div className="join-text">
-          <div className="join-label">加入後援行動</div>
-          <h3>一起讓好政策被看見、被落實</h3>
-        </div>
-        <div className="join-actions">
-          <a className="btn primary" href={site.lineUrl} target="_blank" rel="noreferrer">
-            加入 LINE 好友
-          </a>
-          <a className="btn ghost" href="#updates">
-            查看最新
-          </a>
-        </div>
-      </div>
     </section>
   );
 }
