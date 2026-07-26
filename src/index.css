@@ -19,11 +19,6 @@
   box-sizing: border-box;
 }
 
-html {
-  overflow-x: hidden;
-  width: 100%;
-}
-
 body {
   margin: 0;
   font-family: "Space Grotesk", "Noto Sans TC", sans-serif;

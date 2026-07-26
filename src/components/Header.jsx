@@ -43,7 +43,7 @@ export default function Header() {
         </nav>
       </div>
       <a className="nav-cta" href={site.lineUrl} target="_blank" rel="noreferrer">
-        加入我們
+        加入 LINE
       </a>
     </header>
   );
