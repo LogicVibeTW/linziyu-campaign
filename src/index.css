@@ -1420,6 +1420,21 @@ h1 {
     padding: 14px 6vw;
   }
 
+  .nav-wrap {
+    position: relative;
+  }
+
+  .nav-wrap::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 2px;
+    width: 32px;
+    background: linear-gradient(90deg, transparent, rgba(244, 251, 251, 0.95));
+    pointer-events: none;
+  }
+
   main {
     padding-top: 0;
   }
