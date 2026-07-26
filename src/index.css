@@ -19,6 +19,11 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 body {
   margin: 0;
   font-family: "Space Grotesk", "Noto Sans TC", sans-serif;
@@ -1393,11 +1398,13 @@ h1 {
   .nav {
     flex-wrap: nowrap;
     overflow-x: auto;
+    overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     justify-content: flex-start;
     margin-left: 0;
     padding-bottom: 2px;
+    touch-action: pan-x;
   }
 
   .nav::-webkit-scrollbar {
