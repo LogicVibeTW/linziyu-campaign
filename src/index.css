@@ -926,6 +926,7 @@ h1 {
 .schedule-list {
   display: grid;
   gap: 14px;
+  width: 100%;
 }
 
 .schedule-item {
