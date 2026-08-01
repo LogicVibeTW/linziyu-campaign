@@ -923,38 +923,38 @@ h1 {
   background: rgba(179, 38, 30, 0.06);
 }
 
-.schedule-list {
+.schedule-grid {
   display: grid;
-  gap: 14px;
-  width: 100%;
+  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
-.schedule-item {
-  display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 20px;
+.schedule-card {
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: 18px;
-  padding: 20px 24px;
+  padding: 22px;
   box-shadow: 0 16px 30px rgba(11, 24, 33, 0.08);
 }
 
 .schedule-date {
   font-weight: 700;
   color: var(--party-deep);
-  font-size: 14px;
+  font-size: 13px;
+  letter-spacing: 0.4px;
+  margin-bottom: 10px;
 }
 
-.schedule-body h3 {
-  margin: 0 0 6px;
+.schedule-card h3 {
+  margin: 0 0 8px;
   font-size: 17px;
 }
 
-.schedule-body p {
-  margin: 0 0 8px;
+.schedule-card p {
+  margin: 0 0 10px;
   color: var(--muted);
   font-size: 14px;
+  line-height: 1.5;
 }
 
 .schedule-map-link {
@@ -966,13 +966,6 @@ h1 {
 
 .schedule-map-link:hover {
   text-decoration: underline;
-}
-
-@media (max-width: 640px) {
-  .schedule-item {
-    grid-template-columns: 1fr;
-    gap: 8px;
-  }
 }
 
 .appearance-grid {

@@ -25,24 +25,22 @@ export default function Schedule() {
       )}
 
       {schedule && schedule.length > 0 && (
-        <div className="schedule-list">
+        <div className="schedule-grid">
           {schedule.map((item) => (
-            <div className="schedule-item reveal" key={item.id}>
+            <div className="schedule-card reveal" key={item.id}>
               <div className="schedule-date">{item.date}</div>
-              <div className="schedule-body">
-                <h3>{item.title}</h3>
-                {item.note && <p>{item.note}</p>}
-                {item.mapUrl && (
-                  <a
-                    className="schedule-map-link"
-                    href={item.mapUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    查看地圖 →
-                  </a>
-                )}
-              </div>
+              <h3>{item.title}</h3>
+              {item.note && <p>{item.note}</p>}
+              {item.mapUrl && (
+                <a
+                  className="schedule-map-link"
+                  href={item.mapUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  查看地圖 →
+                </a>
+              )}
             </div>
           ))}
         </div>
