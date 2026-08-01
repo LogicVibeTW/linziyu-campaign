@@ -5,6 +5,7 @@ import About from "./components/About";
 import Policies from "./components/Policies";
 import Join from "./components/Join";
 import Updates from "./components/Updates";
+import Schedule from "./components/Schedule";
 import Live from "./components/Live";
 import Media from "./components/Media";
 import Contact from "./components/Contact";
@@ -32,6 +33,7 @@ export default function App() {
         <Policies />
         <Join />
         <Updates />
+        <Schedule />
         <Live />
         <Media />
         <Contact />

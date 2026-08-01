@@ -5,9 +5,10 @@ export default function Contact() {
   const [showPolicy, setShowPolicy] = useState(false);
 
   return (
-    <section className="section" id="contact">
-      <div className="section-head reveal">
-        <div className="section-label">聯絡</div>
+    <section className="section alt" id="contact">
+      <div className="section-inner">
+        <div className="section-head reveal">
+          <div className="section-label">聯絡</div>
         <h2>與我們聯繫</h2>
         <p>如有任何意見、建議或服務需求，歡迎透過以下方式與我們聯繫。</p>
       </div>
@@ -52,6 +53,7 @@ export default function Contact() {
             <div className="legal-updated">最後更新：{privacyPolicy.updated}</div>
           </div>
         )}
+      </div>
       </div>
     </section>
   );

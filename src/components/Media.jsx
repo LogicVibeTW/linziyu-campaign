@@ -2,7 +2,7 @@ import { site } from "../data/content";
 
 export default function Media() {
   return (
-    <section className="section alt" id="media">
+    <section className="section" id="media">
       <div className="section-inner">
         <div className="section-head reveal">
           <div className="section-label">媒體</div>

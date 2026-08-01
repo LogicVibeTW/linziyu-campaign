@@ -5,7 +5,7 @@ export default function Live() {
   const { live, loading, error } = useLiveStatus();
 
   return (
-    <section className="section" id="live">
+    <section className="section alt" id="live">
       <div className="section-inner">
         <div className="section-head reveal">
           <div className="section-label">直播</div>
