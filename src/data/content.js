@@ -28,7 +28,7 @@ export const site = {
   liveSheetUrl:
     "https://docs.google.com/spreadsheets/d/e/2PACX-1vQZwGyQTZvDSGmHScKFtoIQOLeZOaUTEFcpSc0KyH295YbZVD0m7Lejd5W26hWuK8JH5744KNDb6O2P/pub?gid=64483819&single=true&output=csv",
   scheduleSheetUrl:
-    "https://docs.google.com/spreadsheets/d/e/2PACX-1vQZwGyQTZvDSGmHScKFtoIQOLeZOaUTEFcpSc0KyH295YbZVD0m7Lejd5W26hWuK8JH5744KNDb6O2P/pub?gid=SCHEDULE_TAB_GID&single=true&output=csv",
+    "https://docs.google.com/spreadsheets/d/e/2PACX-1vQZwGyQTZvDSGmHScKFtoIQOLeZOaUTEFcpSc0KyH295YbZVD0m7Lejd5W26hWuK8JH5744KNDb6O2P/pub?gid=1275843698&single=true&output=csv",
 };
 
 export const nav = [
