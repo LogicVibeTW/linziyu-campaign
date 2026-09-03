@@ -3,7 +3,7 @@ export const site = {
   party: "台灣民眾黨",
   district: "板橋",
   slogan: "板橋林子宇 民眾及時雨",
-  lead: "美國南加大公共政策碩士 30而立！板橋最強戰力",
+  lead: "美國南加大公共政策碩士\n30而立！板橋最強戰力",
   tags: ["#板橋", "#務實治理", "#民眾及時雨"],
   lineUrl: "https://line.me/R/ti/p/@384xzlnn?utm_source=website&utm_medium=cta",
   donateUrl: "https://donate.tpp.org.tw/support/LoUdcTJR#action",

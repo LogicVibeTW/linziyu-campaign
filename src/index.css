@@ -172,6 +172,7 @@ h1 {
   color: var(--muted);
   max-width: 520px;
   margin-bottom: 28px;
+  white-space: pre-line;
 }
 
 .cta-row {
