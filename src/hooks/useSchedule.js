@@ -15,6 +15,7 @@ export function useSchedule() {
         title: row.title,
         note: row.note,
         mapUrl: row.map_url,
+        imageUrl: row.image_url,
       }));
   }, [data]);
 

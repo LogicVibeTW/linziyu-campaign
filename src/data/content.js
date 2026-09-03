@@ -3,7 +3,7 @@ export const site = {
   party: "台灣民眾黨",
   district: "板橋",
   slogan: "板橋林子宇 民眾及時雨",
-  lead: "以理性溝通與專業治理，讓政策更透明、服務更即時、板橋更值得期待。",
+  lead: "美國南加大公共政策碩士 30而立！板橋最強戰力",
   tags: ["#板橋", "#務實治理", "#民眾及時雨"],
   lineUrl: "https://line.me/R/ti/p/@384xzlnn?utm_source=website&utm_medium=cta",
   donateUrl: "https://donate.tpp.org.tw/support/LoUdcTJR#action",
@@ -38,13 +38,13 @@ export const nav = [
   { label: "最新", href: "#updates" },
   { label: "行程", href: "#schedule" },
   { label: "直播", href: "#live" },
-  { label: "媒體", href: "#media" },
+  { label: "社群", href: "#media" },
   { label: "聯絡", href: "#contact" },
 ];
 
 export const meta = [
-  { title: "選區", value: "板橋" },
-  { title: "關注議題", value: "交通 / 居住 / 青年" },
+  { title: "選區", value: "新北市第五選區 板橋" },
+  { title: "關注議題", value: "交通、居住、寵物、教育、性別平權" },
   { title: "競選核心", value: "讓板橋宇眾不同" },
 ];
 
@@ -70,6 +70,7 @@ export const education = [
 ];
 
 export const experience = [
+  "立法委員黃國昌板橋服務處主任",
   "台灣民眾黨國際部主任",
   "台灣民眾黨發言人",
   "2024 年不分區立法委員被提名人",

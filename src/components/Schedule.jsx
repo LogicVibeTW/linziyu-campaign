@@ -28,6 +28,16 @@ export default function Schedule() {
         <div className="schedule-grid">
           {schedule.map((item) => (
             <div className="schedule-card reveal" key={item.id}>
+              {item.imageUrl && (
+                <div className="schedule-image-wrap">
+                  <img
+                    className="schedule-image"
+                    src={item.imageUrl}
+                    alt={item.title}
+                    loading="lazy"
+                  />
+                </div>
+              )}
               <div className="schedule-date">{item.date}</div>
               <h3>{item.title}</h3>
               {item.note && <p>{item.note}</p>}

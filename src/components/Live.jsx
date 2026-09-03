@@ -9,7 +9,7 @@ export default function Live() {
       <div className="section-inner">
         <div className="section-head reveal">
           <div className="section-label">直播</div>
-          <h2>即時直播</h2>
+          <h2>選戰日常</h2>
           <p>
             子宇開播時，畫面會顯示於此；沒有直播時，可以直接前往
             <a href={site.youtubeUrl} target="_blank" rel="noreferrer">
