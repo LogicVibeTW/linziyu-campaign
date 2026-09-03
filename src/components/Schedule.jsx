@@ -35,6 +35,9 @@ export default function Schedule() {
                     src={item.imageUrl}
                     alt={item.title}
                     loading="lazy"
+                    onError={(e) => {
+                      e.currentTarget.closest(".schedule-image-wrap").style.display = "none";
+                    }}
                   />
                 </div>
               )}

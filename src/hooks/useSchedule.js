@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import { useSheetData } from "./useSheetData";
 import { site } from "../data/content";
+import { toDisplayableImageUrl } from "../utils/scheduleImage";
 
 export function useSchedule() {
   const { data, loading, error } = useSheetData(site.scheduleSheetUrl);
@@ -15,7 +16,7 @@ export function useSchedule() {
         title: row.title,
         note: row.note,
         mapUrl: row.map_url,
-        imageUrl: row.image_url,
+        imageUrl: toDisplayableImageUrl(row.image_url),
       }));
   }, [data]);
 
