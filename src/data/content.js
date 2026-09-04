@@ -101,6 +101,7 @@ export const joinActions = [
     cta: "前往政治獻金捐款",
     href: site.donateUrl,
     variant: "donate",
+    note: "依政治獻金法規定，捐款需填寫真實姓名及身分資料，請勿使用匿名或他人名義捐款。",
   },
 ];
 

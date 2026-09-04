@@ -21,6 +21,7 @@ export default function Join() {
             >
               {action.cta}
             </a>
+            {action.note && <p className="action-note">{action.note}</p>}
           </div>
         ))}
       </div>
