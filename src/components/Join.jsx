@@ -13,6 +13,7 @@ export default function Join() {
           <div className="action-card reveal" key={action.title}>
             <div className="action-title">{action.title}</div>
             <p>{action.text}</p>
+            {action.note && <p className="action-note">{action.note}</p>}
             <a
               className={`btn btn-${action.variant}`}
               href={action.href}
@@ -21,7 +22,6 @@ export default function Join() {
             >
               {action.cta}
             </a>
-            {action.note && <p className="action-note">{action.note}</p>}
           </div>
         ))}
       </div>
