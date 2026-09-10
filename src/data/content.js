@@ -31,6 +31,9 @@ export const site = {
     "https://docs.google.com/spreadsheets/d/e/2PACX-1vQZwGyQTZvDSGmHScKFtoIQOLeZOaUTEFcpSc0KyH295YbZVD0m7Lejd5W26hWuK8JH5744KNDb6O2P/pub?gid=1275843698&single=true&output=csv",
   legalConsultUrl:
     "https://docs.google.com/forms/d/e/1FAIpQLSfuFd6S3bj9rQLwH2ja9GO-1NEHIVLcxsFccodr2K60GxTcJg/viewform",
+  // 公告彈窗資料來源，等「公告」分頁建立好、取得 gid 後填入實際網址
+  // 格式參考其他 sheet：...pub?gid=你的gid&single=true&output=csv
+  announcementSheetUrl: "",
 };
 
 export const legalService = {

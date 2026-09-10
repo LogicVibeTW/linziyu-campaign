@@ -12,6 +12,7 @@ import Media from "./components/Media";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import FloatingActions from "./components/FloatingActions";
+import Announcement from "./components/Announcement";
 import { useReveal } from "./hooks/useReveal";
 
 export default function App() {
@@ -19,6 +20,7 @@ export default function App() {
 
   return (
     <>
+      <Announcement />
       <div className="bg-grid" aria-hidden="true"></div>
       <div className="noise" aria-hidden="true"></div>
 
