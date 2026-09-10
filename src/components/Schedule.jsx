@@ -4,7 +4,7 @@ export default function Schedule() {
   const { schedule, loading, error } = useSchedule();
 
   return (
-    <section className="section" id="schedule">
+    <section className="section alt" id="schedule">
       <div className="section-head reveal">
         <div className="section-label">行程</div>
         <h2>子宇去哪兒？</h2>

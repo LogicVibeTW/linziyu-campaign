@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Policies from "./components/Policies";
 import Join from "./components/Join";
+import Service from "./components/Service";
 import Updates from "./components/Updates";
 import Schedule from "./components/Schedule";
 import Live from "./components/Live";
@@ -32,6 +33,7 @@ export default function App() {
         <About />
         <Policies />
         <Join />
+        <Service />
         <Updates />
         <Schedule />
         <Live />

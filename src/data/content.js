@@ -29,12 +29,23 @@ export const site = {
     "https://docs.google.com/spreadsheets/d/e/2PACX-1vQZwGyQTZvDSGmHScKFtoIQOLeZOaUTEFcpSc0KyH295YbZVD0m7Lejd5W26hWuK8JH5744KNDb6O2P/pub?gid=64483819&single=true&output=csv",
   scheduleSheetUrl:
     "https://docs.google.com/spreadsheets/d/e/2PACX-1vQZwGyQTZvDSGmHScKFtoIQOLeZOaUTEFcpSc0KyH295YbZVD0m7Lejd5W26hWuK8JH5744KNDb6O2P/pub?gid=1275843698&single=true&output=csv",
+  legalConsultUrl:
+    "https://docs.google.com/forms/d/e/1FAIpQLSfuFd6S3bj9rQLwH2ja9GO-1NEHIVLcxsFccodr2K60GxTcJg/viewform",
+};
+
+export const legalService = {
+  title: "免費法律諮詢",
+  team: "黃國昌律師團隊 X 林子宇服務團隊",
+  schedule: "每週二、五 18:30–20:30",
+  location: "黃國昌 X 林子宇聯合服務處｜新北市板橋區雙十路一段 6 號",
+  note: "採預約制，建議事先電話或線上預約，以免現場久候。",
 };
 
 export const nav = [
   { label: "關於", href: "#about" },
   { label: "核心政見", href: "#policies" },
   { label: "加入我們", href: "#join" },
+  { label: "服務", href: "#service" },
   { label: "最新", href: "#updates" },
   { label: "行程", href: "#schedule" },
   { label: "直播", href: "#live" },
@@ -87,13 +98,6 @@ export const joinActions = [
     cta: "加入 LINE 好友",
     href: site.lineUrl,
     variant: "line",
-  },
-  {
-    title: "想讓子宇聽見你的聲音？",
-    text: "分享你關心的議題與需求，讓政策更貼近現場。",
-    cta: "填寫建議",
-    href: site.feedbackFormUrl,
-    variant: "feedback",
   },
   {
     title: "支持方式",

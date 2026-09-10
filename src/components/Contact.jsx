@@ -5,7 +5,7 @@ export default function Contact() {
   const [showPolicy, setShowPolicy] = useState(false);
 
   return (
-    <section className="section alt" id="contact">
+    <section className="section" id="contact">
       <div className="section-inner">
         <div className="section-head reveal">
           <div className="section-label">聯絡</div>

@@ -37,7 +37,7 @@ export default function Updates() {
   }, []);
 
   return (
-    <section className="section alt" id="updates">
+    <section className="section" id="updates">
       <div className="section-inner">
         <div className="section-head reveal">
           <div className="section-label">最新</div>
