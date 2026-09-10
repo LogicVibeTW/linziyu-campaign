@@ -1648,3 +1648,42 @@ h1 {
     max-width: 100%;
   }
 }
+
+/* ===== 投票日倒數徽章（嵌在導覽列內，跟著導覽列一起固定顯示） ===== */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.countdown-badge {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, var(--party-deep), #045b55);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+  box-shadow: 0 8px 18px rgba(10, 168, 156, 0.3);
+}
+
+@media (max-width: 900px) {
+  .header-right {
+    gap: 8px;
+  }
+
+  .countdown-badge {
+    font-size: 11px;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .countdown-badge {
+    display: none;
+  }
+}
