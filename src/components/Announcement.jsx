@@ -11,8 +11,19 @@ export default function Announcement() {
       return;
     }
     try {
-      const dismissed = localStorage.getItem(announcement.dismissKey);
-      setVisible(!dismissed);
+      const dismissedAt = localStorage.getItem(announcement.dismissKey);
+      if (!dismissedAt) {
+        setVisible(true);
+        return;
+      }
+      // 沒設定 repeatMinutes：關過一次就不再顯示（原本的行為）
+      if (!announcement.repeatMinutes) {
+        setVisible(false);
+        return;
+      }
+      // 設定了 repeatMinutes：經過指定分鐘數後，重新顯示
+      const elapsedMinutes = (Date.now() - Number(dismissedAt)) / (1000 * 60);
+      setVisible(elapsedMinutes >= announcement.repeatMinutes);
     } catch {
       // localStorage 不可用（例如無痕模式部分情況），就照樣顯示，不擋內容
       setVisible(true);
@@ -23,7 +34,7 @@ export default function Announcement() {
 
   function handleClose() {
     try {
-      localStorage.setItem(announcement.dismissKey, "1");
+      localStorage.setItem(announcement.dismissKey, String(Date.now()));
     } catch {
       // 存不了就算了，不影響關閉這個動作本身
     }

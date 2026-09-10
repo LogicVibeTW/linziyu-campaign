@@ -32,11 +32,14 @@ export function useAnnouncement() {
         isNotExpired(row.expire_date)
     );
     if (!match) return null;
+    const repeatMinutes = Number(match.repeat_minutes);
     return {
       title: match.title,
       detail: match.detail,
       imageUrl: toDisplayableImageUrl(match.image_url),
       linkUrl: match.link_url,
+      repeatMinutes:
+        Number.isFinite(repeatMinutes) && repeatMinutes > 0 ? repeatMinutes : null,
       // 用標題+過期日組成唯一 key，內容換了 key 就會變，之前關閉過的紀錄會失效、重新顯示
       dismissKey: `announcement-dismissed:${match.title}:${match.expire_date || ""}`,
     };
