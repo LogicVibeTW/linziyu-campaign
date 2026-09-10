@@ -12,8 +12,14 @@ export function useSheetData(url) {
 
   useEffect(() => {
     let cancelled = false;
+    const MAX_RETRIES = 2;
+    const RETRY_DELAY_MS = 1000;
 
-    async function load() {
+    function wait(ms) {
+      return new Promise((resolve) => setTimeout(resolve, ms));
+    }
+
+    async function loadWithRetry(attempt = 0) {
       try {
         setLoading(true);
         const res = await fetch(url, { cache: "no-store" });
@@ -23,15 +29,23 @@ export function useSheetData(url) {
         if (!cancelled) {
           setData(rows);
           setError(null);
+          setLoading(false);
         }
       } catch (err) {
-        if (!cancelled) setError(err);
-      } finally {
-        if (!cancelled) setLoading(false);
+        if (cancelled) return;
+        // 同時間要抓很多份試算表資料，偶爾會遇到暫時性連線失敗，
+        // 先自動重試幾次，而不是馬上顯示錯誤給訪客看
+        if (attempt < MAX_RETRIES) {
+          await wait(RETRY_DELAY_MS * (attempt + 1));
+          if (!cancelled) await loadWithRetry(attempt + 1);
+        } else {
+          setError(err);
+          setLoading(false);
+        }
       }
     }
 
-    if (url) load();
+    if (url) loadWithRetry();
 
     return () => {
       cancelled = true;
