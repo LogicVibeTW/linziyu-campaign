@@ -884,6 +884,8 @@ h1 {
   border: 1px solid var(--line);
   box-shadow: 0 16px 30px rgba(11, 24, 33, 0.08);
   overflow: hidden;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .fb-feed-wrap .fb-page,
