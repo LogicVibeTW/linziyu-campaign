@@ -1649,41 +1649,133 @@ h1 {
   }
 }
 
-/* ===== 投票日倒數徽章（嵌在導覽列內，跟著導覽列一起固定顯示） ===== */
-.header-right {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex-shrink: 0;
+/* ===== 投票日倒數卡片（固定在畫面右側，垂直置中，捲動不會移動） ===== */
+.countdown-card {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 15;
+  width: 96px;
+  background: var(--card);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 16px 32px rgba(11, 24, 33, 0.18);
+  text-align: center;
+  padding: 14px 8px 16px;
 }
 
-.countdown-badge {
-  display: flex;
-  align-items: center;
-  background: linear-gradient(135deg, var(--party-deep), #045b55);
-  color: #fff;
-  padding: 8px 16px;
-  border-radius: 999px;
-  font-size: 12px;
+.countdown-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(135deg, var(--gold), #b8863a);
+}
+
+.countdown-card-date {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-top: 4px;
+}
+
+.countdown-card-label {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.countdown-card-divider {
+  width: 28px;
+  height: 1px;
+  background: var(--line);
+  margin: 10px auto;
+}
+
+.countdown-card-sub {
+  font-size: 11px;
+  color: var(--party-deep);
   font-weight: 600;
-  letter-spacing: 0.3px;
-  white-space: nowrap;
-  box-shadow: 0 8px 18px rgba(10, 168, 156, 0.3);
+}
+
+.countdown-card-days {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--party-deep);
+  line-height: 1.2;
+  margin-top: 2px;
+}
+
+.countdown-card-days span {
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 2px;
 }
 
 @media (max-width: 900px) {
-  .header-right {
-    gap: 8px;
+  .countdown-card {
+    display: none;
+  }
+}
+
+/* ===== 投票日倒數徽章（手機版，嵌在導覽列裡，900px以上隱藏，改用上面的浮動卡片） ===== */
+.countdown-pill {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .countdown-pill {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--card);
+    border: 1px solid var(--party-deep);
+    border-radius: 999px;
+    padding: 6px 12px;
+    position: relative;
+    flex-shrink: 0;
   }
 
-  .countdown-badge {
+  .countdown-pill::after {
+    content: "";
+    position: absolute;
+    left: 14px;
+    right: 14px;
+    bottom: -2px;
+    height: 3px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--gold), #b8863a);
+  }
+
+  .countdown-pill-label {
     font-size: 11px;
-    padding: 6px 12px;
+    color: var(--party-deep);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .countdown-pill-days {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--party-deep);
+    white-space: nowrap;
+  }
+
+  .countdown-pill-unit {
+    font-size: 12px;
+    font-weight: 500;
+    margin-left: 1px;
   }
 }
 
 @media (max-width: 480px) {
-  .countdown-badge {
+  .countdown-pill-label {
     display: none;
   }
 }

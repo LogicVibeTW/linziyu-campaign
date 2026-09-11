@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { nav, site } from "../data/content";
 import { useActiveSection } from "../hooks/useActiveSection";
-import CountdownBadge from "./CountdownBadge";
+import CountdownPill from "./CountdownPill";
 
 export default function Header() {
   const ids = nav.map((item) => item.href.replace("#", ""));
@@ -43,12 +43,10 @@ export default function Header() {
           })}
         </nav>
       </div>
-      <div className="header-right">
-        <CountdownBadge />
-        <a className="nav-cta" href={site.lineUrl} target="_blank" rel="noreferrer">
-          加入 LINE
-        </a>
-      </div>
+      <CountdownPill />
+      <a className="nav-cta" href={site.lineUrl} target="_blank" rel="noreferrer">
+        加入 LINE
+      </a>
     </header>
   );
 }

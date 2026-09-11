@@ -13,6 +13,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import FloatingActions from "./components/FloatingActions";
 import Announcement from "./components/Announcement";
+import CountdownBadge from "./components/CountdownBadge";
 import { useReveal } from "./hooks/useReveal";
 
 export default function App() {
@@ -28,6 +29,7 @@ export default function App() {
         跳到主要內容
       </a>
 
+      <CountdownBadge />
       <Header />
 
       <main id="main-content">
