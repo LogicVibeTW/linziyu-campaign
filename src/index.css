@@ -127,6 +127,13 @@ body {
   border-color: transparent;
 }
 
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
 .nav-cta {
   text-decoration: none;
   padding: 10px 16px;
@@ -1730,30 +1737,20 @@ h1 {
 
 @media (max-width: 900px) {
   .countdown-pill {
-    display: flex;
-    align-items: center;
-    gap: 6px;
+    display: inline-flex;
+    align-items: baseline;
+    gap: 5px;
     background: var(--card);
     border: 1px solid var(--party-deep);
     border-radius: 999px;
-    padding: 6px 12px;
-    position: relative;
+    padding: 5px 14px;
+    line-height: 1;
     flex-shrink: 0;
-  }
-
-  .countdown-pill::after {
-    content: "";
-    position: absolute;
-    left: 14px;
-    right: 14px;
-    bottom: -2px;
-    height: 3px;
-    border-radius: 999px;
-    background: linear-gradient(135deg, var(--gold), #b8863a);
+    width: fit-content;
   }
 
   .countdown-pill-label {
-    font-size: 11px;
+    font-size: 12px;
     color: var(--party-deep);
     font-weight: 600;
     white-space: nowrap;
@@ -1761,7 +1758,7 @@ h1 {
 
   .countdown-pill-days {
     font-family: "Space Grotesk", sans-serif;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 700;
     color: var(--party-deep);
     white-space: nowrap;
@@ -1771,11 +1768,5 @@ h1 {
     font-size: 12px;
     font-weight: 500;
     margin-left: 1px;
-  }
-}
-
-@media (max-width: 480px) {
-  .countdown-pill-label {
-    display: none;
   }
 }

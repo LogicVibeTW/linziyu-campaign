@@ -43,10 +43,12 @@ export default function Header() {
           })}
         </nav>
       </div>
-      <CountdownPill />
-      <a className="nav-cta" href={site.lineUrl} target="_blank" rel="noreferrer">
-        加入 LINE
-      </a>
+      <div className="header-right">
+        <CountdownPill />
+        <a className="nav-cta" href={site.lineUrl} target="_blank" rel="noreferrer">
+          加入 LINE
+        </a>
+      </div>
     </header>
   );
 }
