@@ -10,10 +10,7 @@ export default function Hero() {
         <h1>{site.slogan}</h1>
         <p className="lead">{site.lead}</p>
         <div className="cta-row">
-          <a className="btn primary" href={site.lineUrl} target="_blank" rel="noreferrer">
-            加入 LINE 好友
-          </a>
-          <a className="btn ghost" href="#policies">
+          <a className="btn primary" href="#policies">
             了解核心政見
           </a>
         </div>

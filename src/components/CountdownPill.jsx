@@ -8,7 +8,7 @@ export default function CountdownPill() {
 
   return (
     <div className="countdown-pill" role="status" aria-live="off">
-      <span className="countdown-pill-label">選戰倒數</span>
+      <span className="countdown-pill-label">11月28日出門投票｜選戰倒數</span>
       <span className="countdown-pill-days">
         {daysLeft}
         <span className="countdown-pill-unit">天</span>

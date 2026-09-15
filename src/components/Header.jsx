@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { nav, site } from "../data/content";
+import { nav } from "../data/content";
 import { useActiveSection } from "../hooks/useActiveSection";
 import CountdownPill from "./CountdownPill";
 
@@ -45,9 +45,6 @@ export default function Header() {
       </div>
       <div className="header-right">
         <CountdownPill />
-        <a className="nav-cta" href={site.lineUrl} target="_blank" rel="noreferrer">
-          加入 LINE
-        </a>
       </div>
     </header>
   );
