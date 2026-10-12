@@ -2,7 +2,7 @@ import { site, legalService } from "../data/content";
 
 export default function Service() {
   return (
-    <section className="section alt" id="service">
+    <section className="section" id="service">
       <div className="section-inner">
         <div className="section-head reveal">
           <div className="section-label">服務</div>

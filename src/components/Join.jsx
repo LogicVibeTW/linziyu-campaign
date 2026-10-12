@@ -2,7 +2,7 @@ import { joinActions, site } from "../data/content";
 
 export default function Join() {
   return (
-    <section className="section" id="join">
+    <section className="section alt" id="join">
       <div className="section-head reveal">
         <div className="section-label">加入我們</div>
         <h2>加入團隊，一起把想法變成行動</h2>

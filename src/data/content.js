@@ -138,7 +138,7 @@ export const contactList = [
 ];
 
 export const privacyPolicy = {
-  updated: "2026 年 7 月",
+  updated: "2026 年 10 月",
   sections: [
     {
       title: "一、適用範圍",
@@ -150,7 +150,7 @@ export const privacyPolicy = {
     },
     {
       title: "三、第三方服務與 Cookie",
-      body: "本網站使用以下第三方服務，各自可能依其自身政策蒐集資料：(1) Google 表單／試算表：用於接收志工報名資料，受 Google 隱私權政策規範；(2) Facebook 粉專嵌入元件：載入時可能由 Meta 設定 Cookie，受 Meta 資料政策規範；(3) LINE 官方帳號：點擊後將導向 LINE 平台，加好友後的互動資料由 LINE 平台處理；(4) Vercel Web Analytics：用於統計匿名瀏覽數據（如造訪頁數、裝置類型），不使用 Cookie、不蒐集可識別個人身分之資訊；(5) Google Fonts：載入網頁字體時，您的瀏覽器會與 Google 伺服器連線，可能傳輸 IP 位址等基本連線資訊。",
+      body: "本網站使用以下第三方服務，各自可能依其自身政策蒐集資料：(1) Google 表單／試算表：用於接收志工報名資料，受 Google 隱私權政策規範；(2) Facebook 粉專嵌入元件：載入時可能由 Meta 設定 Cookie，受 Meta 資料政策規範；(3) LINE 官方帳號：點擊後將導向 LINE 平台，加好友後的互動資料由 LINE 平台處理；(4) Vercel Web Analytics：用於統計匿名瀏覽數據（如造訪頁數、裝置類型），不使用 Cookie、不蒐集可識別個人身分之資訊；(5) Google Fonts：載入網頁字體時，您的瀏覽器會與 Google 伺服器連線，可能傳輸 IP 位址等基本連線資訊；(6) Google Analytics 4：用於統計瀏覽行為（如瀏覽頁面、停留時間、流量來源與裝置類型），會在您的瀏覽器設定 Cookie，資料由 Google 處理，受 Google 隱私權政策規範，您可透過瀏覽器設定拒絕或刪除 Cookie；(7) 瀏覽器本機儲存：公告視窗被關閉後，會在您的瀏覽器記錄「已關閉」狀態，避免重複打擾，此紀錄僅存在您的裝置內，不會回傳至本網站。",
     },
     {
       title: "四、資料保存期間",
@@ -166,3 +166,36 @@ export const privacyPolicy = {
     },
   ],
 };
+
+// 林子宇的承諾：候選人簽署的公開承諾書。新增時，把圖檔放進 public/promises/，再照格式加一筆即可（新的放最前面）。
+export const promises = [
+  {
+    id: "riverside-park",
+    tag: "在地議題",
+    title: "環河公園暨交通分隊選址公開承諾書",
+    date: "2026/09/23",
+    summary: "針對「板橋分局交通分隊暨香雅里環河公園市民活動中心新建工程」公開表態：",
+    points: [
+      "支持板橋分局交通分隊重新選址，不使用環河公園作為興建基地",
+      "若另覓基地，支持香雅里活動中心與交通分隊「脫鉤」，另行尋求適當方式滿足居民活動空間需求",
+    ],
+    image: "/promises/riverside-park.jpg",
+    imageAlt:
+      "環河公園暨交通分隊選址公開承諾書，林子宇於 115 年 9 月 23 日簽署，兩項提問皆勾選「是」。",
+  },
+  {
+    id: "firefighters",
+    tag: "公共政策",
+    title: "消防權益承諾書",
+    date: "2026/08/25",
+    summary: "承諾任期內重視消防權益，並推動三項措施：",
+    points: [
+      "補足消防人力：預算員額已達編制上限時，促成機關盡速擴編，並督促市府編列預算補齊實際員額",
+      "增加輪休、降低工時：以實質增加輪休天數落實勤一休二，並嚴格監督排班機制",
+      "保障消防隊員職業安全：各分隊落實消防衣除汙分區規劃，並裝設車庫車輛廢氣排氣收集系統",
+    ],
+    image: "/promises/firefighters.jpg",
+    imageAlt:
+      "消防權益承諾書，候選人林子宇簽署，內容為補足消防人力、增加輪休降低工時、保障消防隊員職業安全三項承諾。",
+  },
+];

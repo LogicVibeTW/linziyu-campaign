@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Policies from "./components/Policies";
+import Promises from "./components/Promises";
 import Join from "./components/Join";
 import Service from "./components/Service";
 import Updates from "./components/Updates";
@@ -36,6 +37,7 @@ export default function App() {
         <Hero />
         <About />
         <Policies />
+        <Promises />
         <Join />
         <Service />
         <Updates />
