@@ -61,8 +61,8 @@ body {
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line);
   z-index: 10;
-  max-width: 1440px;
-  margin: 0 auto;
+  padding-left: max(6vw, calc((100vw - 1440px) / 2 + 6vw));
+  padding-right: max(6vw, calc((100vw - 1440px) / 2 + 6vw));
 }
 
 .brand {
