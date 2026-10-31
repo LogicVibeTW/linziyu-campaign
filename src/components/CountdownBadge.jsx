@@ -1,4 +1,5 @@
 import { useDaysToElection } from "../hooks/useDaysToElection";
+import { candidateNumber } from "../data/content";
 
 // 電腦版：固定在畫面右側、垂直置中的浮動卡片
 export default function CountdownBadge() {
@@ -17,6 +18,8 @@ export default function CountdownBadge() {
         {daysLeft}
         <span>天</span>
       </div>
+      <div className="countdown-card-divider"></div>
+      <div className="countdown-card-no">林子宇 {candidateNumber} 號</div>
     </div>
   );
 }

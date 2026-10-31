@@ -56,7 +56,10 @@ export const nav = [
   { label: "聯絡", href: "#contact" },
 ];
 
+export const candidateNumber = "6";
+
 export const meta = [
+  { title: "候選人號次", value: `${candidateNumber} 號` },
   { title: "選區", value: "新北市第五選區 板橋" },
   { title: "關注議題", value: "交通、居住、寵物、教育、性別平權" },
   { title: "競選核心", value: "讓板橋宇眾不同" },

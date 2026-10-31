@@ -1,4 +1,5 @@
 import { useDaysToElection } from "../hooks/useDaysToElection";
+import { candidateNumber } from "../data/content";
 
 // 手機版：嵌在導覽列裡的小圓角徽章（電腦版另外用 CountdownBadge 浮動卡片）
 export default function CountdownPill() {
@@ -8,6 +9,7 @@ export default function CountdownPill() {
 
   return (
     <div className="countdown-pill" role="status" aria-live="off">
+      <span className="countdown-pill-no">{candidateNumber}號</span>
       <span className="countdown-pill-label">11月28日出門投票｜選戰倒數</span>
       <span className="countdown-pill-days">
         {daysLeft}
