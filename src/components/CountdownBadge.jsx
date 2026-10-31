@@ -19,7 +19,9 @@ export default function CountdownBadge() {
         <span>天</span>
       </div>
       <div className="countdown-card-divider"></div>
-      <div className="countdown-card-no">林子宇 {candidateNumber} 號</div>
+      <div className="countdown-card-no" role="img" aria-label={`候選人號次 ${candidateNumber} 號`}>
+        {candidateNumber}
+      </div>
     </div>
   );
 }

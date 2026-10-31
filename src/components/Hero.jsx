@@ -37,7 +37,6 @@ export default function Hero() {
           <div className="portrait-badge">候選人</div>
           <div className="number-badge" role="img" aria-label={`候選人號次 ${candidateNumber} 號`}>
             <span className="number-badge-num">{candidateNumber}</span>
-            <span className="number-badge-unit">號</span>
           </div>
           <picture>
             <source srcSet="/linziyu.webp" type="image/webp" />
